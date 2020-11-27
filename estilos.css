@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    color: rgb(3, 0, 0);
+}
+
+body {
+    background-image: url(SALUD.png);
+    background-size: 60%;
+    background-attachment: fixed;
+}
+
+.title {
+    color: #030303;
+    text-align: center;
+    margin-top: 50px;
+    font-size: 50px;
+}
+
+.title font {
+    font-weight: 100;
+    color: #040274;
+}
+
+.container_cards {
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    perspective: 900px;
+}
+
+.card {
+    width: 100%;
+    background: #7d7bee02;
+    padding-bottom: 20px;
+    transition: all 600ms ease-in-out;
+    transform: scale(0.6);
+    box-shadow: 0px 20px 50px -10px rgb(10, 10, 10);
+}
+
+.card:hover {
+    cursor: pointer;
+    transform: scale(1) translateY(10px);
+}
+
+.card_header {
+    padding: 10px;
+    text-align: center;
+    background: #05daff;
+}
+
+.card_cover {
+    width: 100%;
+}
+
+.card_cover img {
+    display: block;
+    margin: auto;
+    width: 300px;
+    padding: 20px;
+}
+
+.details {
+    margin-top: 5px;
+    text-align: center;
+}
+
+.details h2 {
+    padding: 10px;
+    background: #f8f541;
+    margin-bottom: 5px;
+}
+
+.details h3 {
+    margin-top: 10px;
+}
+
+hr {
+    border: none;
+    width: 80%;
+    height: 2px;
+    background:#05daff;
+}
+
+.details h3 font {
+    font-weight: 400;
+}
+
+@media screen and (max-width: 800px) {
+    .container_cards {
+        perspective: none;
+        flex-wrap: wrap;
+    }
+    .card {
+        max-width: 290px;
+        margin: 20px;
+        transform: scale(1);
+    }
+    .card:hover {
+        transform: translateY(0px) scale(1.08);
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .card {
+        max-width: 350px;
+        margin: 20px;
+        transform: translateY(0deg) scale(1);
+    }
+}
